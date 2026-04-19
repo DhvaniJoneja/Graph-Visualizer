@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Graph Engine</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+</head>
+
+<body>
+
+<h1>Graph Engine Visualizer 🚀</h1>
+
+<div class="container">
+
+  <!-- LEFT PANEL -->
+  <div class="controls">
+
+    <h3>Graph Settings</h3>
+
+    <label>
+      <input type="checkbox" id="directed"> Directed
+    </label>
+
+    <label>
+      <input type="checkbox" id="weighted"> Weighted
+    </label>
+
+    <hr>
+    <h3>Source Node</h3> 
+    <input id="source" placeholder="Source Node">
+
+    <h3>Add Edges</h3>
+
+    <textarea id="edgesInput" rows="6" placeholder="Enter edges like:
+u v weieght"></textarea>
+
+    <button onclick="addEdgesBulk()">Add Edges</button>
+
+    <button onclick="clearGraph()">Clear Graph</button>
+
+    <hr>
+
+    <h3>Run Algorithm</h3>
+
+<select id="algo">
+  <option value="1">BFS</option>
+  <option value="2">DFS</option>
+  <option value="3">Dijkstra</option>
+  <option value="4">Prim</option>
+  <option value="5">Kruskal</option>
+  <option value="6">Topological Sort</option>
+</select>
+
+
+<button onclick="runAlgo()">Run</button>
+
+    <hr>
+
+    <h3>Output</h3>
+    <div id="output"></div>
+
+  </div>
+
+  <div id="graph"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
