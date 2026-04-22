@@ -2,3 +2,9 @@ node_modules/
 backend/engine
 .DS_Store
 demo.exe
+.env
+uploads/
+.vscode/
+backend/graph_engine
+demo.cpp
+output/

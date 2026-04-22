@@ -12,9 +12,15 @@
 
 <div class="container">
 
-  <!-- LEFT PANEL -->
   <div class="controls">
+    <div class="file-upload">
+  <label for="fileInput" class="file-label">Choose .cpp File</label>
+  <input type="file" id="fileInput" accept=".cpp" />
+  
+  <span id="fileName">No file chosen</span>
 
+  <button onclick="uploadFile()">Upload & Parse</button>
+</div>
     <h3>Graph Settings</h3>
 
     <label>
